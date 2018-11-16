@@ -1,10 +1,16 @@
 package com.qa.persistence.domain;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 
 @Entity
 
@@ -15,6 +21,13 @@ public class Classroom {
 	private Long classroom_id;
 	@Column (length = 100)
 	private String name_of_trainer;
+	
+	
+	
+	@OneToMany (fetch = FetchType.EAGER, cascade=CascadeType.ALL)
+	@JoinColumn()
+	
+	private List<Student> studentList;
 	
 	
 	

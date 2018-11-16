@@ -11,7 +11,7 @@ import javax.ws.rs.Produces;
 
 import com.qa.business.service.AccountService;
 
-@Path("/classroom")
+@Path("/classrooms")
 
 public class AccountEndpoint 
 {
